@@ -9,8 +9,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var gotoNext:Bool = false
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView{
+            ZStack{
+                Color("customBlack").edgesIgnoringSafeArea(.all)
+                VStack(alignment:.center){
+                    Spacer()
+                    Image(systemName: "bolt.circle")
+                    .resizable()
+                    .frame(width:120,height: 120)
+                    .foregroundColor(.white)
+                    Spacer()
+                    NavigationLink(destination:SignUpView(),isActive: self.$gotoNext){
+                        Button("Go"){
+                            self.gotoNext.toggle()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

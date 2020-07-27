@@ -13,6 +13,13 @@
 		225FC96824CE952A00B84A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225FC96724CE952A00B84A4D /* Assets.xcassets */; };
 		225FC96B24CE952A00B84A4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225FC96A24CE952A00B84A4D /* Preview Assets.xcassets */; };
 		225FC96E24CE952A00B84A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225FC96C24CE952A00B84A4D /* LaunchScreen.storyboard */; };
+		2282E68824CF199C004CC086 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E68724CF199C004CC086 /* SignUpView.swift */; };
+		2282E68B24CF25E4004CC086 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E68A24CF25E4004CC086 /* FloatingTextField.swift */; };
+		2282E68D24CF25FD004CC086 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E68C24CF25FD004CC086 /* CustomTextField.swift */; };
+		2282E68F24CF2B52004CC086 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E68E24CF2B52004CC086 /* LogInView.swift */; };
+		2282E69124CF2CD3004CC086 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E69024CF2CD3004CC086 /* KeyboardResponder.swift */; };
+		2282E69424CF39DE004CC086 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E69324CF39DE004CC086 /* ForgotPasswordView.swift */; };
+		2282E69624CF5D84004CC086 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E69524CF5D84004CC086 /* ShakeAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		225FC96A24CE952A00B84A4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		225FC96D24CE952A00B84A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		225FC96F24CE952A00B84A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2282E68724CF199C004CC086 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		2282E68A24CF25E4004CC086 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		2282E68C24CF25FD004CC086 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		2282E68E24CF2B52004CC086 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		2282E69024CF2CD3004CC086 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		2282E69324CF39DE004CC086 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		2282E69524CF5D84004CC086 /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 		225FC96024CE952700B84A4D /* Apparel */ = {
 			isa = PBXGroup;
 			children = (
+				2282E68924CF25D6004CC086 /* Supporting Views */,
 				225FC96124CE952700B84A4D /* AppDelegate.swift */,
 				225FC96324CE952700B84A4D /* SceneDelegate.swift */,
 				225FC96524CE952700B84A4D /* ContentView.swift */,
@@ -63,6 +78,9 @@
 				225FC96C24CE952A00B84A4D /* LaunchScreen.storyboard */,
 				225FC96F24CE952A00B84A4D /* Info.plist */,
 				225FC96924CE952A00B84A4D /* Preview Content */,
+				2282E68724CF199C004CC086 /* SignUpView.swift */,
+				2282E68E24CF2B52004CC086 /* LogInView.swift */,
+				2282E69324CF39DE004CC086 /* ForgotPasswordView.swift */,
 			);
 			path = Apparel;
 			sourceTree = "<group>";
@@ -73,6 +91,17 @@
 				225FC96A24CE952A00B84A4D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2282E68924CF25D6004CC086 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				2282E68A24CF25E4004CC086 /* FloatingTextField.swift */,
+				2282E68C24CF25FD004CC086 /* CustomTextField.swift */,
+				2282E69024CF2CD3004CC086 /* KeyboardResponder.swift */,
+				2282E69524CF5D84004CC086 /* ShakeAnimation.swift */,
+			);
+			path = "Supporting Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2282E68824CF199C004CC086 /* SignUpView.swift in Sources */,
+				2282E68F24CF2B52004CC086 /* LogInView.swift in Sources */,
 				225FC96224CE952700B84A4D /* AppDelegate.swift in Sources */,
+				2282E68D24CF25FD004CC086 /* CustomTextField.swift in Sources */,
 				225FC96424CE952700B84A4D /* SceneDelegate.swift in Sources */,
+				2282E69624CF5D84004CC086 /* ShakeAnimation.swift in Sources */,
+				2282E69124CF2CD3004CC086 /* KeyboardResponder.swift in Sources */,
+				2282E68B24CF25E4004CC086 /* FloatingTextField.swift in Sources */,
+				2282E69424CF39DE004CC086 /* ForgotPasswordView.swift in Sources */,
 				225FC96624CE952700B84A4D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
