@@ -15,29 +15,25 @@ struct ForgotPasswordView: View {
     @State var attempts: Int = 0
     
     var body: some View {
-        ZStack{
-                Color("customBlack").edgesIgnoringSafeArea(.all)
-                VStack(){
-                    Text("Please, enter your email address. You will receive a link to create a new password via email.").padding()
-                    VStack(){
-                        email.modifier(Shake(animatableData: CGFloat(attempts)))
-                        
-                        Button(action:{
-                            withAnimation(.default) {
-                                self.attempts += 1
-                            }
-                        }){
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                .foregroundColor(Color("customRed"))
-                                Text("Send").foregroundColor(Color("customWhite"))
-                            }.frame(height: 50)
-                        }.padding()
+        VStack(){
+            Text("Please, enter your email address. You will receive a link to create a new password via email.").padding()
+            VStack(){
+                email.modifier(Shake(animatableData: CGFloat(attempts)))
+                
+                Button(action:{
+                    withAnimation(.default) {
+                        self.attempts += 1
                     }
-                    Spacer()
-                }.padding(.top,15)
-                    
-        }
+                }){
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .foregroundColor(Color("customRed"))
+                        Text("Send").foregroundColor(Color("customWhite"))
+                    }.frame(height: 50)
+                }.padding()
+            }
+            Spacer()
+        }.padding(.top,15)
         .navigationBarTitle("Forgot Password")
     }
 }

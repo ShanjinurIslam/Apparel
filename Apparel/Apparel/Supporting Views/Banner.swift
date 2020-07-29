@@ -17,7 +17,7 @@ struct Banner: View {
                     .aspectRatio(contentMode: .fit)
                 Rectangle()                         // Shapes are resizable by default
                 .foregroundColor(.clear)        // Making rectangle transparent
-                    .background(LinearGradient(gradient: Gradient(colors: [.clear, Color("customBlack")]), startPoint: .top,endPoint:.bottom))
+                    .background(LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .top,endPoint:.bottom))
                 
             }
             .frame(width:UIScreen.main.bounds.width,height:UIScreen.main.bounds.height*0.66)

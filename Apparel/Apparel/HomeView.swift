@@ -11,14 +11,11 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ZStack{
-            Color("customBlack").edgesIgnoringSafeArea(.all)
-            ScrollView(.vertical){
-                Banner()
-                Catagory(name: "New")
-                Catagory(name: "Sale")
-                Catagory(name: "Classic").padding(.bottom,100)
-            }
+        ScrollView(.vertical){
+            Banner()
+            Catagory(name: "New")
+            Catagory(name: "Sale")
+            Catagory(name: "Classic").padding(.bottom,100)
         }
         .edgesIgnoringSafeArea(.all)
     }

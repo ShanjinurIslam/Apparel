@@ -12,22 +12,24 @@ struct ContentView: View {
     @State var gotoNext:Bool = false
     
     var body: some View {
-        NavigationView{
-            ZStack{
-                Color("customBlack").edgesIgnoringSafeArea(.all)
-                VStack(alignment:.center){
-                    Spacer()
-                    Image(systemName: "bolt.circle")
-                    .resizable()
-                    .frame(width:120,height: 120)
-                    .foregroundColor(.white)
-                    Spacer()
-                    NavigationLink(destination:MainView(),isActive: self.$gotoNext){
+        ZStack{
+            if(gotoNext==false){
+                ZStack{
+                    Color("customBlack").edgesIgnoringSafeArea(.all)
+                    VStack(alignment:.center){
+                        Spacer()
+                        Image(systemName: "bolt.circle")
+                        .resizable()
+                        .frame(width:120,height: 120)
+                        .foregroundColor(.white)
+                        Spacer()
                         Button("Go"){
                             self.gotoNext.toggle()
                         }
                     }
                 }
+            }else{
+                MainView()
             }
         }
     }

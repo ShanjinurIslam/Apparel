@@ -9,14 +9,28 @@
 import SwiftUI
 
 struct ShopView: View {
+    
     var body: some View {
-        Text("Hello, World!")
-        .navigationBarTitle("Catagories")
-            .navigationBarItems(trailing: Button(action:{
-                
-            }){
-                Image(systemName: "magni")
-            })
+        NavigationView{
+            ScrollView(.vertical){
+                VStack(alignment:.leading){
+                    Button(action:{
+                        
+                    }){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25,style: .continuous)
+                            Text("View all items").foregroundColor(.white)
+                        }.frame(height:48)
+                    }.padding()
+                    
+                    Text("Choose Category").font(.caption).foregroundColor(Color("customGray")).padding(.top,0).padding(.bottom,15).padding(.leading,15)
+                    
+                    CategoryColumn()
+                    
+                }
+            }
+            .navigationBarTitle(Text("Categories"))
+        }
     }
 }
 

@@ -10,7 +10,10 @@ import SwiftUI
 
 struct BagView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView{
+            Text("Data")
+            .navigationBarTitle("Bag")
+        }
     }
 }
 

@@ -10,17 +10,17 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        TabView {
+        TabView{
             HomeView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
-                }
+            }
             ShopView()
                 .tabItem {
                     Image(systemName: "cart")
                     Text("Shop")
-                }
+            }
             BagView()
                 .tabItem {
                     Image(systemName: "bag")
@@ -35,11 +35,9 @@ struct MainView: View {
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")
-                }
-            
+            }
         }
         .accentColor(Color("customMagenta"))
-        .navigationBarBackButtonHidden(true)
     }
 }
 
