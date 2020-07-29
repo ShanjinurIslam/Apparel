@@ -22,7 +22,7 @@ struct ContentView: View {
                     .frame(width:120,height: 120)
                     .foregroundColor(.white)
                     Spacer()
-                    NavigationLink(destination:SignUpView(),isActive: self.$gotoNext){
+                    NavigationLink(destination:MainView(),isActive: self.$gotoNext){
                         Button("Go"){
                             self.gotoNext.toggle()
                         }

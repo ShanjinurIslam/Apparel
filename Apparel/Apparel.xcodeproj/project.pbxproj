@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224D126D24D10ED6005A179C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D126C24D10ED6005A179C /* MainView.swift */; };
+		224D126F24D117B8005A179C /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D126E24D117B8005A179C /* Banner.swift */; };
+		224D127124D117E2005A179C /* CatagoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D127024D117E2005A179C /* CatagoryRow.swift */; };
+		224D127324D117F9005A179C /* Catagory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D127224D117F9005A179C /* Catagory.swift */; };
+		224D127524D1368E005A179C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D127424D1368E005A179C /* HomeView.swift */; };
+		224D127724D13962005A179C /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D127624D13962005A179C /* ShopView.swift */; };
+		224D127924D1396D005A179C /* BagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D127824D1396D005A179C /* BagView.swift */; };
+		224D127D24D13985005A179C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D127C24D13985005A179C /* ProfileView.swift */; };
+		224D127F24D13999005A179C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D127E24D13999005A179C /* FavoritesView.swift */; };
 		225FC96224CE952700B84A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FC96124CE952700B84A4D /* AppDelegate.swift */; };
 		225FC96424CE952700B84A4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FC96324CE952700B84A4D /* SceneDelegate.swift */; };
 		225FC96624CE952700B84A4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FC96524CE952700B84A4D /* ContentView.swift */; };
@@ -23,6 +32,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		224D126C24D10ED6005A179C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		224D126E24D117B8005A179C /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		224D127024D117E2005A179C /* CatagoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoryRow.swift; sourceTree = "<group>"; };
+		224D127224D117F9005A179C /* Catagory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catagory.swift; sourceTree = "<group>"; };
+		224D127424D1368E005A179C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		224D127624D13962005A179C /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		224D127824D1396D005A179C /* BagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagView.swift; sourceTree = "<group>"; };
+		224D127C24D13985005A179C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		224D127E24D13999005A179C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		225FC95E24CE952700B84A4D /* Apparel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apparel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225FC96124CE952700B84A4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		225FC96324CE952700B84A4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +99,12 @@
 				2282E68724CF199C004CC086 /* SignUpView.swift */,
 				2282E68E24CF2B52004CC086 /* LogInView.swift */,
 				2282E69324CF39DE004CC086 /* ForgotPasswordView.swift */,
+				224D126C24D10ED6005A179C /* MainView.swift */,
+				224D127424D1368E005A179C /* HomeView.swift */,
+				224D127624D13962005A179C /* ShopView.swift */,
+				224D127824D1396D005A179C /* BagView.swift */,
+				224D127C24D13985005A179C /* ProfileView.swift */,
+				224D127E24D13999005A179C /* FavoritesView.swift */,
 			);
 			path = Apparel;
 			sourceTree = "<group>";
@@ -100,6 +124,9 @@
 				2282E68C24CF25FD004CC086 /* CustomTextField.swift */,
 				2282E69024CF2CD3004CC086 /* KeyboardResponder.swift */,
 				2282E69524CF5D84004CC086 /* ShakeAnimation.swift */,
+				224D126E24D117B8005A179C /* Banner.swift */,
+				224D127024D117E2005A179C /* CatagoryRow.swift */,
+				224D127224D117F9005A179C /* Catagory.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -178,13 +205,22 @@
 				2282E68824CF199C004CC086 /* SignUpView.swift in Sources */,
 				2282E68F24CF2B52004CC086 /* LogInView.swift in Sources */,
 				225FC96224CE952700B84A4D /* AppDelegate.swift in Sources */,
+				224D127524D1368E005A179C /* HomeView.swift in Sources */,
 				2282E68D24CF25FD004CC086 /* CustomTextField.swift in Sources */,
+				224D127124D117E2005A179C /* CatagoryRow.swift in Sources */,
+				224D127924D1396D005A179C /* BagView.swift in Sources */,
 				225FC96424CE952700B84A4D /* SceneDelegate.swift in Sources */,
+				224D126F24D117B8005A179C /* Banner.swift in Sources */,
 				2282E69624CF5D84004CC086 /* ShakeAnimation.swift in Sources */,
 				2282E69124CF2CD3004CC086 /* KeyboardResponder.swift in Sources */,
+				224D127324D117F9005A179C /* Catagory.swift in Sources */,
+				224D126D24D10ED6005A179C /* MainView.swift in Sources */,
 				2282E68B24CF25E4004CC086 /* FloatingTextField.swift in Sources */,
 				2282E69424CF39DE004CC086 /* ForgotPasswordView.swift in Sources */,
+				224D127D24D13985005A179C /* ProfileView.swift in Sources */,
+				224D127724D13962005A179C /* ShopView.swift in Sources */,
 				225FC96624CE952700B84A4D /* ContentView.swift in Sources */,
+				224D127F24D13999005A179C /* FavoritesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

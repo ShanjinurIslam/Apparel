@@ -18,7 +18,6 @@ struct LogInView: View {
         ZStack{
                 Color("customBlack").edgesIgnoringSafeArea(.all)
                 VStack(alignment:.center){
-                    Spacer()
                     VStack(){
                         email
                         password
@@ -47,11 +46,10 @@ struct LogInView: View {
                                 Text("Login").foregroundColor(Color("customWhite"))
                             }.frame(width:0.90*UIScreen.main.bounds.size.width,height: 50)
                         }.padding(.top,15)
-                    }
+                    }.padding(.top,UIScreen.main.bounds.height*0.1)
                     Spacer()
-                    Spacer()
-                    
                 }
+                
         }
         .navigationBarTitle("Log In")
     }
