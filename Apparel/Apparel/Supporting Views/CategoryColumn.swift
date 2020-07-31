@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CategoryColumn: View {
+    
     private var catagories:[String] = ["Tops","Shirts","Dresses","Skirts"]
     
     struct CatagoryItem: View {

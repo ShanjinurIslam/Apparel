@@ -10,6 +10,7 @@ import SwiftUI
 import StatefulTabView
 
 struct MainView: View {
+    
     var body: some View {
         StatefulTabView() {
             Tab(title: "Home", systemImageName: "house") {
