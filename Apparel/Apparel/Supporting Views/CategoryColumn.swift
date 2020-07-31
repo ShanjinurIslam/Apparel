@@ -11,6 +11,24 @@ import SwiftUI
 struct CategoryColumn: View {
     private var catagories:[String] = ["Tops","Shirts","Dresses","Skirts"]
     
+    struct CatagoryItem: View {
+        var name:String!
+        
+        var body: some View {
+            HStack{
+                Text(name)
+                Spacer()
+                NavigationLink(destination:CatalogView(catagory: self.name)){
+                    Image(systemName: "arrow.right")
+                }
+            }
+            .padding(.leading,15)
+            .padding(.trailing,15)
+            .padding(.top,2.5)
+            .padding(.bottom,2.5)
+        }
+    }
+    
     var body: some View {
         ScrollView(.horizontal){
             ForEach(0...catagories.count-1,id:\.self){

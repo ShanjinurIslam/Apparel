@@ -7,37 +7,30 @@
 //
 
 import SwiftUI
+import StatefulTabView
 
 struct MainView: View {
     var body: some View {
-        TabView{
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
+        StatefulTabView() {
+            Tab(title: "Home", systemImageName: "house") {
+                HomeView()
             }
-            ShopView()
-                .tabItem {
-                    Image(systemName: "cart")
-                    Text("Shop")
+            Tab(title: "Shop", systemImageName: "cart") {
+                ShopView()
             }
-            BagView()
-                .tabItem {
-                    Image(systemName: "bag")
-                    Text("Bag")
-                }
-            FavoritesView()
-                .tabItem {
-                    Image(systemName: "heart")
-                    Text("Favorites")
-                }
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
+            Tab(title: "Bag", systemImageName: "bag") {
+                BagView()
+            }
+            Tab(title: "Favorites", systemImageName: "heart") {
+                FavoritesView()
+            }
+            Tab(title: "Profile", systemImageName: "person") {
+                FavoritesView()
             }
         }
+        .barAppearanceConfiguration(.default)
         .accentColor(Color("customMagenta"))
+    
     }
 }
 

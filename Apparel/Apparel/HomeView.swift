@@ -13,9 +13,9 @@ struct HomeView: View {
     var body: some View {
         ScrollView(.vertical){
             Banner()
-            Catagory(name: "New")
-            Catagory(name: "Sale")
-            Catagory(name: "Classic").padding(.bottom,100)
+            CatagoryRow(name: "New")
+            CatagoryRow(name: "Sale")
+            CatagoryRow(name: "Classic").padding(.bottom,100)
         }
         .edgesIgnoringSafeArea(.all)
     }

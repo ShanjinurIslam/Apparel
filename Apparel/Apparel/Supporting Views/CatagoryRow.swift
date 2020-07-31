@@ -9,59 +9,33 @@
 import SwiftUI
 
 struct CatagoryRow: View {
+    var name:String
     var items:[String] = ["cloth","cloth","cloth"]
     
-    struct CategoryItem: View {
-        var name:String
-        @State var fav:Bool = false
-        
-        var body: some View {
-            VStack(alignment: .leading) {
-                ZStack(alignment: .bottomTrailing){
-                    Image(name)
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 140, height: 200)
-                        .cornerRadius(8)
-                    
-                    ZStack{
-                        Circle().foregroundColor(Color("customLightDark"))
-                        Button(action:{
-                            self.fav.toggle()
-                        }){
-                            if(self.fav){
-                                Image(systemName: "heart.fill").foregroundColor(Color("customRed"))
-                            }
-                            else{
-                                Image(systemName: "heart").foregroundColor(Color("customGray"))
-                            }
-                        }
-                    }
-                    .foregroundColor(Color("customLightDark"))
-                    .frame(width: 36, height: 36)
-                    .shadow(radius: 8)
-                    .offset(y:16)
-                }
-                Text("Ecstacy")
-                    .foregroundColor(Color("customGray"))
-                    .font(.subheadline)
-                Text("Western Dress")
-                    .foregroundColor(.primary)
-                    .font(.caption)
-                Text("$12")
-                    .foregroundColor(Color("customGray"))
-                    .font(.headline)
-            }
-            .padding(.leading, 15)
-        }
-    }
-    
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(alignment: .top, spacing: 0) {
-                ForEach((0...items.count-1), id: \.self) {
-                    CategoryItem(name:self.items[$0])
+        VStack(alignment:.leading){
+            HStack{
+                VStack(alignment:.leading){
+                    Text(name).font(.system(size:34)).bold()
+                    Text("You have never seen like this").font(.system(size:15)).foregroundColor(Color("customGray"))
+                }
+                Spacer()
+                VStack(alignment:.center){
+                    Spacer()
+                    Button(action:{
+                        
+                    }){
+                        Text("View all").foregroundColor(Color("customGray")).font(.system(size:15))
+                    }
+                    Spacer()
+                }
+            }.padding()
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach((0...items.count-1), id: \.self) {
+                        ProductItem(name:self.items[$0]).padding(.leading, 15)
+                    }
                 }
             }
         }
