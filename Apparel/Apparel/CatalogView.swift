@@ -11,81 +11,54 @@ import SwiftUI
 struct CatalogView: View {
     
     var catagory:String
-    @State var sortBy:String = "Price low to high"
     @State var changeAppearance:Bool = false
     @State var showSheetView = false
     @State var current = 0
-    
+    var sortCategories:[String] = ["Popular","Newest","Price high to low","Price low to high"]
     
     
     struct SheetView: View {
         @Binding var showSheetView: Bool
         @Binding var current:Int
+        var sortCategories:[String]!
         
-        // have to change it to array and dynamic
-
+        struct SortItem: View{
+            var name:String
+            var index:Int
+            @Binding var current:Int
+            
+            var body: some View{
+                Button(action:{
+                    self.current = self.index
+                }){
+                    HStack{
+                        Text(name)
+                        Spacer()
+                        if(self.current==index){
+                            Image(systemName: "checkmark").frame(width:24,height: 24)
+                        }
+                        else{
+                            Rectangle().frame(width:24,height: 24).foregroundColor(.clear)
+                        }
+                    }
+                    .padding(.top,5)
+                    .padding(.bottom,5)
+                    .padding(.leading,15)
+                    .padding(.trailing,15)
+                    
+                }
+            }
+        }
+        
         var body: some View {
             NavigationView {
                 VStack(alignment:.leading){
-                    Button(action:{
-                        self.current = 0
-                    }){
-                        HStack{
-                            Text("Popular")
-                            Spacer()
-                            if(self.current==0){
-                                Image(systemName: "checkmark").frame(width:24,height: 24)
-                            }
-                            else{
-                                Rectangle().frame(width:24,height: 24).foregroundColor(.clear)
-                            }
-                        }.padding()
+                    ForEach((0...self.sortCategories.count-1),id: \.self){
+                        SortItem(name:self.sortCategories[$0],index: $0, current: self.$current)
                     }
-                    Button(action:{
-                        self.current = 1
-                    }){
-                        HStack{
-                            Text("Newest")
-                            Spacer()
-                            if(self.current==1){
-                                Image(systemName: "checkmark").frame(width:24,height: 24)
-                            }
-                            else{
-                                Rectangle().frame(width:24,height: 24).foregroundColor(.clear)
-                            }
-                        }.padding()
-                    }
-                    Button(action:{
-                        self.current = 2
-                    }){
-                        HStack{
-                            Text("Price high to low")
-                            Spacer()
-                            if(self.current==2){
-                                Image(systemName: "checkmark").frame(width:24,height: 24)
-                            }
-                            else{
-                                Rectangle().frame(width:24,height: 24).foregroundColor(.clear)
-                            }
-                        }.padding()
-                    }
-                    Button(action:{
-                        self.current = 3
-                    }){
-                        HStack{
-                            Text("Price low to high")
-                            Spacer()
-                            if(self.current==3){
-                                Image(systemName: "checkmark").frame(width:24,height: 24)
-                            }
-                            else{
-                                Rectangle().frame(width:24,height: 24).foregroundColor(.clear)
-                            }
-                        }.padding()
-                    }
-                    
                     Spacer()
                 }
+                .offset(y:10)
                 .navigationBarTitle(Text("Sort By"), displayMode: .inline)
                     .navigationBarItems(trailing: Button(action: {
                         print("Dismissing sheet view...")
@@ -101,9 +74,7 @@ struct CatalogView: View {
         ScrollView(.vertical){
             VStack(alignment:.center){
                 HStack{
-                    Button(action:{
-                        
-                    }){
+                    NavigationLink(destination:Filter()){
                         Image(systemName: "line.horizontal.3.decrease.circle").frame(width:24,height: 24)
                     }
                     Spacer()
@@ -112,7 +83,7 @@ struct CatalogView: View {
                     }){
                         HStack{
                             Image(systemName: "arrow.up.arrow.down")
-                            Text(self.sortBy).font(.caption)
+                            Text(self.sortCategories[self.current]).font(.caption)
                         }
                     }
                     Spacer()
@@ -145,7 +116,7 @@ struct CatalogView: View {
         .sheet(isPresented: $showSheetView,onDismiss: {
             self.showSheetView = false
         }) {
-            SheetView(showSheetView: self.$showSheetView, current: self.$current)
+            SheetView(showSheetView: self.$showSheetView, current: self.$current,sortCategories: self.sortCategories)
         }
     }
 }

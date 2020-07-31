@@ -34,6 +34,7 @@
 		22D4770C24D3CD9D00067270 /* CatalogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D4770B24D3CD9D00067270 /* CatalogList.swift */; };
 		22D4770E24D3D5E100067270 /* CatalogGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D4770D24D3D5E100067270 /* CatalogGrid.swift */; };
 		22D4771124D3DBAD00067270 /* StatefulTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 22D4771024D3DBAD00067270 /* StatefulTabView */; };
+		22D4771824D4602300067270 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D4771724D4602300067270 /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		22D4770924D3CD1E00067270 /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
 		22D4770B24D3CD9D00067270 /* CatalogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogList.swift; sourceTree = "<group>"; };
 		22D4770D24D3D5E100067270 /* CatalogGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogGrid.swift; sourceTree = "<group>"; };
+		22D4771724D4602300067270 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				22D4770924D3CD1E00067270 /* ProductItem.swift */,
 				22D4770B24D3CD9D00067270 /* CatalogList.swift */,
 				22D4770D24D3D5E100067270 /* CatalogGrid.swift */,
+				22D4771724D4602300067270 /* Filter.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2282E68824CF199C004CC086 /* SignUpView.swift in Sources */,
+				22D4771824D4602300067270 /* Filter.swift in Sources */,
 				2282E68F24CF2B52004CC086 /* LogInView.swift in Sources */,
 				225FC96224CE952700B84A4D /* AppDelegate.swift in Sources */,
 				224D127524D1368E005A179C /* HomeView.swift in Sources */,
