@@ -26,7 +26,7 @@ struct MainView: View {
                 FavoritesView()
             }
             Tab(title: "Profile", systemImageName: "person") {
-                FavoritesView()
+                ProfileView()
             }
         }
         .barAppearanceConfiguration(.default)

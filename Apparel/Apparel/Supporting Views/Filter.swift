@@ -23,17 +23,15 @@ struct Filter: View {
         var sizeName:String
         
         var body: some View{
-            Button(action:{
+            ZStack(alignment:.center){
+                RoundedRectangle(cornerRadius: 5,style: .continuous)
+                    .frame(width:40,height: 40)
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(self.selected ? .red:.gray)
+                Text(sizeName).font(.system(size:14)).bold()
+                    .foregroundColor(self.selected ? .black:.white)
+            }.onTapGesture {
                 self.selected.toggle()
-            }){
-                ZStack(alignment:.center){
-                    RoundedRectangle(cornerRadius: 5,style: .continuous)
-                        .frame(width:40,height: 40)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(self.selected ? .red:.gray)
-                    Text(sizeName).font(.system(size:14)).bold()
-                        .foregroundColor(self.selected ? .black:.white)
-                }
             }
         }
     }
@@ -43,17 +41,15 @@ struct Filter: View {
         var categoryName:String
         
         var body: some View{
-            Button(action:{
+            ZStack(alignment:.center){
+                RoundedRectangle(cornerRadius: 5,style: .continuous)
+                    .frame(width:65,height: 40)
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(self.selected ? .red:.gray)
+                Text(categoryName).font(.system(size:14)).bold()
+                    .foregroundColor(self.selected ? .black:.white)
+            }.onTapGesture {
                 self.selected.toggle()
-            }){
-                ZStack(alignment:.center){
-                    RoundedRectangle(cornerRadius: 5,style: .continuous)
-                        .frame(width:65,height: 40)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(self.selected ? .red:.gray)
-                    Text(categoryName).font(.system(size:14)).bold()
-                        .foregroundColor(self.selected ? .black:.white)
-                }
             }
         }
     }

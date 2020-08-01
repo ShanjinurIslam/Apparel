@@ -35,7 +35,7 @@ struct CatagoryRow: View {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach((0...items.count-1), id: \.self) { item in
                         NavigationLink(destination: ProductView()){
-                            ProductItem(name:self.items[item]).padding(.leading, 15)
+                            GridItem(name:self.items[item]).padding(.leading, 15)
                         }
                     }
                 }

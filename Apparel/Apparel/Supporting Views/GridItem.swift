@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ProductItem: View {
+struct GridItem: View {
     var name:String
     @State var fav:Bool = false
     
@@ -50,11 +50,5 @@ struct ProductItem: View {
                 .foregroundColor(Color("customGray"))
                 .font(.headline)
         }
-    }
-}
-
-struct ProductItem_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductItem(name: "cloth")
     }
 }

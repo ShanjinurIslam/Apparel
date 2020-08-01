@@ -19,7 +19,7 @@ struct CatalogGrid: View {
                     HStack {
                         ForEach(0 ..< self.columns, id: \.self) { column in
                             NavigationLink(destination:ProductView()){
-                                ProductItem(name:"cloth").padding()
+                                GridItem(name:"cloth").padding()
                             }
                         }
                     }
