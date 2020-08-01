@@ -18,7 +18,9 @@ struct CatalogGrid: View {
                 ForEach(0 ..< rows, id: \.self) { row in
                     HStack {
                         ForEach(0 ..< self.columns, id: \.self) { column in
-                            ProductItem(name:"cloth").padding()
+                            NavigationLink(destination:ProductView()){
+                                ProductItem(name:"cloth").padding()
+                            }
                         }
                     }
                 }

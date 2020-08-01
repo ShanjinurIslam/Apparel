@@ -11,13 +11,17 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ScrollView(.vertical){
-            Banner()
-            CatagoryRow(name: "New")
-            CatagoryRow(name: "Sale")
-            CatagoryRow(name: "Classic").padding(.bottom,100)
+        NavigationView{
+            ScrollView(.vertical,showsIndicators: false){
+                Banner()
+                CatagoryRow(name: "New")
+                CatagoryRow(name: "Sale")
+                CatagoryRow(name: "Classic").padding(.bottom,100)
+            }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .edgesIgnoringSafeArea(.all)
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

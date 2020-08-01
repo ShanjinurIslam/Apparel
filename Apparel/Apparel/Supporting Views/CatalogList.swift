@@ -20,10 +20,12 @@ struct CatalogList: View {
                 RoundedRectangle(cornerRadius: 10,style: .continuous).foregroundColor(Color("customLightDark"))
                 HStack{
                     Image(name)
+                        .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width:100,height:100)
                         .cornerRadius(10)
+                    
                     VStack(alignment:.leading,spacing: 5){
                         Text("Ecstacy")
                             .foregroundColor(Color("customGray"))
@@ -66,8 +68,10 @@ struct CatalogList: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading, spacing: 0) {
-                ForEach((0...items.count-1), id: \.self) {
-                    CatalogItem(name:self.items[$0])
+                ForEach((0...items.count-1), id: \.self) { item in
+                    NavigationLink(destination:ProductView()){
+                        CatalogItem(name:self.items[item])
+                    }
                 }
             }
         }

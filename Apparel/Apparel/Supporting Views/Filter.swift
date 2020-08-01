@@ -9,44 +9,14 @@
 import SwiftUI
 
 struct Filter: View {
-   @State private var price: Double = 30
     private var colors:[Color] = [.accentColor,.black,.red,.orange,.green,.pink]
     private var sizes:[String] = ["XS","S","M","L","XL"]
     private var categories:[String] = ["All","Men","Women","Boys","Girls"]
+    @State var lowerValue: Double = 0.2
+    @State var upperValue: Double = 0.8
     
     
     @State private var selectedColor = 0
-    
-    struct ColorButton:View{
-        @Binding var selectedColor:Int
-        var color:Color
-        var index:Int
-        
-        
-        var body: some View{
-            Button(action:{
-                self.selectedColor = self.index
-            }){
-                ZStack(alignment:.center){
-                    
-                    if(self.selectedColor==self.index){
-                        Circle()
-                        .foregroundColor(.clear)
-                        .frame(width:42,height: 42)
-                        .frame(maxWidth: .infinity)
-                            .overlay(Circle().stroke(lineWidth:2).foregroundColor(.gray))
-                    }
-                    
-                    Circle()
-                    .foregroundColor(color)
-                    .frame(width:36,height: 36)
-                    .frame(maxWidth: .infinity)
-                    
-                }
-                    
-            }
-        }
-    }
     
     struct SizeButton:View{
         @State var selected:Bool = false
@@ -95,7 +65,14 @@ struct Filter: View {
                 Text("Price Range").font(.body).bold().foregroundColor(Color("customGray")).padding()
                 Spacer()
             }
-            Slider(value: $price, in: 10...100, step: 0.1).padding()
+            
+            RSlider(lowerValue: $lowerValue, upperValue: $upperValue, minimumValue: 0.0, maximumValue: 1.0)
+                .frame(height: 25)
+                .padding(.top,5)
+                .padding(.bottom,5)
+                .padding(.leading,15)
+                .padding(.trailing,15)
+            
             HStack{
                 Text("Colors").font(.body).bold().foregroundColor(Color("customGray")).padding()
                 Spacer()

@@ -23,7 +23,7 @@ struct CatagoryRow: View {
                 VStack(alignment:.center){
                     Spacer()
                     Button(action:{
-                        
+                        //print("Dean's List")
                     }){
                         Text("View all").foregroundColor(Color("customGray")).font(.system(size:15))
                     }
@@ -33,8 +33,10 @@ struct CatagoryRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
-                    ForEach((0...items.count-1), id: \.self) {
-                        ProductItem(name:self.items[$0]).padding(.leading, 15)
+                    ForEach((0...items.count-1), id: \.self) { item in
+                        NavigationLink(destination: ProductView()){
+                            ProductItem(name:self.items[item]).padding(.leading, 15)
+                        }
                     }
                 }
             }
