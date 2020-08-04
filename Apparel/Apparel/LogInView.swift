@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LogInView: View {
-    
+    @EnvironmentObject var userData:UserData
     @State var email:CustomTextField = CustomTextField(placeholder: "Email",secure: false)
     @State var password:CustomTextField = CustomTextField(placeholder: "Password",secure: true)
     @State var gotoLogin:Bool = false
@@ -36,7 +36,10 @@ struct LogInView: View {
                 .padding(.top,10)
                 
                 Button(action:{
-                    
+                    withAnimation(.default){
+                        self.userData.signUpView = false
+                        self.userData.gotoNext = true
+                    }
                 }){
                     ZStack{
                         RoundedRectangle(cornerRadius: 20, style: .continuous)

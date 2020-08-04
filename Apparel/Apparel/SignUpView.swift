@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SignUpView: View {
     
+    @EnvironmentObject var userData:UserData
     @State var name:CustomTextField = CustomTextField(placeholder: "Name",secure: false)
     @State var email:CustomTextField = CustomTextField(placeholder: "Email",secure: false)
     @State var password:CustomTextField = CustomTextField(placeholder: "Password",secure: true)
@@ -26,7 +27,7 @@ struct SignUpView: View {
                 HStack{
                     Spacer()
                     Text("Already have an account?")
-                    NavigationLink(destination: LogInView(), isActive: self.$gotoLogin ){
+                    NavigationLink(destination: LogInView().environmentObject(self.userData), isActive: self.$gotoLogin ){
                         Button(action:{
                             self.gotoLogin.toggle()
                         }){
@@ -40,7 +41,10 @@ struct SignUpView: View {
                 .padding(.top,10)
                 
                 Button(action:{
-                    
+                    withAnimation(.default){
+                        self.userData.signUpView = false
+                        self.userData.gotoNext = true
+                    }
                 }){
                     ZStack{
                         RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -58,8 +62,3 @@ struct SignUpView: View {
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUpView()
-    }
-}

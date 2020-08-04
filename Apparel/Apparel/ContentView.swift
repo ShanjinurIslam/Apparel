@@ -7,13 +7,29 @@
 //
 
 import SwiftUI
+import Introspect
+
+@available(iOS 13, *)
+extension View {
+    /// A Boolean value indicating whether the view controller enforces a modal behavior.
+    ///
+    /// The default value of this property is `false`. When you set it to `true`, UIKit ignores events
+    /// outside the view controller's bounds and prevents the interactive dismissal of the
+    /// view controller while it is onscreen.
+    public func isModalInPresentation(_ value: Bool) -> some View {
+        introspectViewController {
+            $0.isModalInPresentation = value
+        }
+    }
+}
 
 struct ContentView: View {
-    @State var gotoNext:Bool = false
-    
+    @EnvironmentObject var userData:UserData
+    @State var shouldAnimate:Bool = true
+
     var body: some View {
         ZStack{
-            if(gotoNext==false){
+            if(userData.gotoNext==false){
                 ZStack{
                     Color("customBlack").edgesIgnoringSafeArea(.all)
                     VStack(alignment:.center){
@@ -23,20 +39,22 @@ struct ContentView: View {
                         .frame(width:120,height: 120)
                         .foregroundColor(.white)
                         Spacer()
-                        Button("Go"){
-                            self.gotoNext.toggle()
-                        }
+                        ActivityIndicator(shouldAnimate: self.$shouldAnimate)
                     }
                 }
             }else{
                 MainView()
+                .transition(AnyTransition.opacity)
+                .animation(.default)
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        .onAppear(perform: self.userData.checkLoggedIn)
+        .sheet(isPresented: self.$userData.signUpView ,onDismiss: {
+            self.userData.signUpView = false
+        }){
+            NavigationView{
+                SignUpView().environmentObject(self.userData)
+            }.isModalInPresentation(true)
+        }
     }
 }

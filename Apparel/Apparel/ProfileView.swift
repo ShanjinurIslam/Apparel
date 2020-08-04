@@ -36,21 +36,23 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationView{
-            VStack(alignment:.leading){
-                HStack(spacing:15){
-                    Image("banner").resizable().aspectRatio(contentMode: .fill).frame(width:64,height: 64).clipShape(Circle())
-                    VStack(alignment:.leading){
-                        Text("Shanjinur Islam").font(.headline)
-                        Text("spondoncsebuet@gmail.com").font(.caption)
+            ScrollView(.vertical){
+                VStack(alignment:.leading){
+                    HStack(spacing:15){
+                        Image("banner").resizable().aspectRatio(contentMode: .fill).frame(width:64,height: 64).clipShape(Circle())
+                        VStack(alignment:.leading){
+                            Text("Shanjinur Islam").font(.headline)
+                            Text("spondoncsebuet@gmail.com").font(.caption)
+                        }
+                        Spacer()
+                    }.padding()
+                    VStack{
+                        ForEach((0...self.categories.count-1),id:\.self){
+                            CatagoryItem(name: self.categories[$0])
+                        }
                     }
                     Spacer()
-                }.padding()
-                VStack{
-                    ForEach((0...self.categories.count-1),id:\.self){
-                        CatagoryItem(name: self.categories[$0])
-                    }
                 }
-                Spacer()
             }
             .navigationBarTitle("Profile")
         }

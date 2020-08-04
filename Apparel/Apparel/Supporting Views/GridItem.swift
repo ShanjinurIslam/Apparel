@@ -19,7 +19,7 @@ struct GridItem: View {
                     .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 164, height: 200)
+                    .frame(width: 165, height: 200)
                     .cornerRadius(10)
                 
                 ZStack{
@@ -50,5 +50,6 @@ struct GridItem: View {
                 .foregroundColor(Color("customGray"))
                 .font(.headline)
         }
+        .frame(maxWidth: .infinity)
     }
 }

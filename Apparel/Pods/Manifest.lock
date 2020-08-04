@@ -1,16 +1,20 @@
 PODS:
+  - Introspect (0.1.0)
   - WARangeSlider (1.1.1)
 
 DEPENDENCIES:
+  - Introspect
   - WARangeSlider
 
 SPEC REPOS:
   trunk:
+    - Introspect
     - WARangeSlider
 
 SPEC CHECKSUMS:
+  Introspect: ad32f2b7b9e7ac2c008b9dfec3d5325fbd3660fa
   WARangeSlider: 54b3e0853b8d16c444fd539005901aecee86837d
 
-PODFILE CHECKSUM: 0a6f4ffa47a4468239159e57064cad122f2b5f97
+PODFILE CHECKSUM: 53ffdc8323c14549bcf406947ec76fecb52591c1
 
 COCOAPODS: 1.8.4

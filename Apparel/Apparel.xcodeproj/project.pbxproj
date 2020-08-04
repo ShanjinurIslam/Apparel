@@ -24,6 +24,8 @@
 		225FC96824CE952A00B84A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225FC96724CE952A00B84A4D /* Assets.xcassets */; };
 		225FC96B24CE952A00B84A4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225FC96A24CE952A00B84A4D /* Preview Assets.xcassets */; };
 		225FC96E24CE952A00B84A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225FC96C24CE952A00B84A4D /* LaunchScreen.storyboard */; };
+		22817BC224D9CDD00014DF38 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22817BC124D9CDD00014DF38 /* UserData.swift */; };
+		22817BC424D9D3240014DF38 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22817BC324D9D3240014DF38 /* ActivityIndicator.swift */; };
 		2282E68824CF199C004CC086 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E68724CF199C004CC086 /* SignUpView.swift */; };
 		2282E68B24CF25E4004CC086 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E68A24CF25E4004CC086 /* FloatingTextField.swift */; };
 		2282E68D24CF25FD004CC086 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E68C24CF25FD004CC086 /* CustomTextField.swift */; };
@@ -65,6 +67,8 @@
 		225FC96A24CE952A00B84A4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		225FC96D24CE952A00B84A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		225FC96F24CE952A00B84A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22817BC124D9CDD00014DF38 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		22817BC324D9D3240014DF38 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		2282E68724CF199C004CC086 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2282E68A24CF25E4004CC086 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		2282E68C24CF25FD004CC086 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		225FC96024CE952700B84A4D /* Apparel */ = {
 			isa = PBXGroup;
 			children = (
+				22817BC024D9CDBB0014DF38 /* Model */,
 				2282E68924CF25D6004CC086 /* Supporting Views */,
 				225FC96124CE952700B84A4D /* AppDelegate.swift */,
 				225FC96324CE952700B84A4D /* SceneDelegate.swift */,
@@ -152,6 +157,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		22817BC024D9CDBB0014DF38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22817BC124D9CDD00014DF38 /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2282E68924CF25D6004CC086 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 				22D4771B24D5194100067270 /* RangeSlider.swift */,
 				22A53F6D24D556500017F04A /* ColorButton.swift */,
 				221EEE5224D5A5D8001D4A96 /* SheetView.swift */,
+				22817BC324D9D3240014DF38 /* ActivityIndicator.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -334,6 +348,7 @@
 				2282E69124CF2CD3004CC086 /* KeyboardResponder.swift in Sources */,
 				224D126D24D10ED6005A179C /* MainView.swift in Sources */,
 				2282E68B24CF25E4004CC086 /* FloatingTextField.swift in Sources */,
+				22817BC224D9CDD00014DF38 /* UserData.swift in Sources */,
 				2282E69424CF39DE004CC086 /* ForgotPasswordView.swift in Sources */,
 				22D4771C24D5194100067270 /* RangeSlider.swift in Sources */,
 				22D4770A24D3CD1E00067270 /* GridItem.swift in Sources */,
@@ -342,6 +357,7 @@
 				22D4770824D3C30C00067270 /* CatalogView.swift in Sources */,
 				224D127724D13962005A179C /* ShopView.swift in Sources */,
 				22D4770C24D3CD9D00067270 /* CatalogList.swift in Sources */,
+				22817BC424D9D3240014DF38 /* ActivityIndicator.swift in Sources */,
 				225FC96624CE952700B84A4D /* ContentView.swift in Sources */,
 				22C879C424D5C330005D43C7 /* CartItem.swift in Sources */,
 				224D127F24D13999005A179C /* FavoritesView.swift in Sources */,
